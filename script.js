@@ -418,3 +418,25 @@
 
 
 
+const video = document.getElementById('momVideo');
+const btn = document.getElementById('playBtn');
+const wrapper = document.querySelector('.video-block');
+
+btn.addEventListener('click', () => {
+  video.play();
+  wrapper.classList.add('playing');
+});
+
+video.addEventListener('click', () => {
+  if (!video.paused) video.pause();
+});
+
+/* если видео поставили на паузу — вернуть кнопку */
+video.addEventListener('pause', () => {
+  wrapper.classList.remove('playing');
+});
+
+/* если закончилось */
+video.addEventListener('ended', () => {
+  wrapper.classList.remove('playing');
+});
