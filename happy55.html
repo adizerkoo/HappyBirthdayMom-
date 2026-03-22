@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>С Юбилеем, Мамочка! 55 💐</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader">
+    <div class="preloader-heart">💐</div>
+    <div class="preloader-text">Готовим сюрприз...</div>
+  </div>
+
+  <!-- CANVASES -->
+  <canvas id="particles"></canvas>
+  <canvas id="scrollFx"></canvas>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox">
+    <button class="lightbox-close">✕</button>
+    <button class="lightbox-nav prev">‹</button>
+    <button class="lightbox-nav next">›</button>
+    <img src="" alt="Фото">
+    <div class="lightbox-counter"></div>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-sparkle" style="top:18%;left:12%;animation-delay:0s">✨</div>
+    <div class="hero-sparkle" style="top:70%;left:80%;animation-delay:1s">🌸</div>
+    <div class="hero-sparkle" style="top:30%;right:15%;animation-delay:0.5s">💫</div>
+    <div class="hero-sparkle" style="top:55%;left:25%;animation-delay:1.5s">🌟</div>
+    <div class="hero-sparkle" style="top:80%;left:55%;animation-delay:2s">✨</div>
+    <div class="hero-sparkle" style="top:15%;right:30%;animation-delay:0.8s">💐</div>
+    <div class="hero-sparkle" style="top:40%;left:70%;animation-delay:2.3s">🦋</div>
+    <div class="hero-sparkle" style="top:65%;left:8%;animation-delay:1.3s">🌷</div>
+    <div class="container" style="text-align:center">
+      <div class="hero-badge reveal">🌹 Юбилей</div>
+      <h1 class="reveal" style="transition-delay:0.15s">С Днём<br>Рождения,<br>Мамочка!</h1>
+      <div class="hero-number reveal" style="transition-delay:0.3s">55</div>
+      <p class="hero-subtitle reveal" style="transition-delay:0.45s">
+        Самой нежной, самой доброй, самой любимой маме на свете
+      </p>
+      <button class="scroll-indicator reveal" style="transition-delay:0.6s" onclick="document.querySelector('.facts-section').scrollIntoView({behavior:'smooth'})">
+        <span>Начни путешествие</span>
+        <div class="scroll-arrow"></div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== FACTS ==================== -->
+  <section class="facts-section">
+    <div class="container">
+      <span class="section-label reveal">О тебе</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">Ты — наша<br>гордость</h2>
+      <div class="divider reveal" style="transition-delay:0.2s"></div>
+      <p class="section-desc reveal" style="transition-delay:0.3s">
+        Каждый день ты наполняешь мир теплом, заботой и любовью
+      </p>
+      <div class="facts-list">
+        <div class="fact-card reveal-left" style="transition-delay:0.1s">
+          <div class="fact-emoji">👩‍🍳</div>
+          <div class="fact-content">
+            <div class="fact-title">Лучший повар</div>
+            <div class="fact-desc">Повар с огромным стажем! Твои пироги и пицца — самые вкусные на свете</div>
+          </div>
+        </div>
+        <div class="fact-card reveal-right" style="transition-delay:0.2s">
+          <div class="fact-emoji">🌷</div>
+          <div class="fact-content">
+            <div class="fact-title">Королева цветов</div>
+            <div class="fact-desc">Очень любишь цветы и сажаешь целые плантации в деревне — настоящий рай!</div>
+          </div>
+        </div>
+        <div class="fact-card reveal-left" style="transition-delay:0.3s">
+          <div class="fact-emoji">🧵</div>
+          <div class="fact-content">
+            <div class="fact-title">Мастерица вышивки</div>
+            <div class="fact-desc">Занимаешься вышивкой и вышила столько красивых картин — творец с золотыми руками</div>
+          </div>
+        </div>
+        <div class="fact-card reveal-right" style="transition-delay:0.4s">
+          <div class="fact-emoji">💪</div>
+          <div class="fact-content">
+            <div class="fact-title">Несгибаемая сила</div>
+            <div class="fact-desc">55 лет — а энергии и силы хватит на всех. Ты наш источник вдохновения</div>
+          </div>
+        </div>
+        <div class="fact-card reveal-left" style="transition-delay:0.5s">
+          <div class="fact-emoji">❤️</div>
+          <div class="fact-content">
+            <div class="fact-title">Заботливая и добрая</div>
+            <div class="fact-desc">Самая заботливая и добрая мама — ты всегда рядом, когда нужна поддержка</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="gallery-section">
+    <div class="container">
+      <span class="section-label reveal">Галерея</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">Мгновения<br>счастья</h2>
+      <div class="divider reveal" style="transition-delay:0.2s"></div>
+      <p class="section-desc reveal" style="transition-delay:0.3s">
+        Каждое фото — маленькая история любви нашей семьи
+      </p>
+
+      <!-- CAROUSEL -->
+      <div class="carousel reveal-scale" style="transition-delay:0.4s"
+        data-captions='["Наша прекрасная мамочка 💐","Лучшие моменты вместе 🌟","Мамины вкуснейшие пироги и пицца — пальчики оближешь! 🍕","Среди любимых цветов — в своём раю 🌷","Золотые руки мастерицы вышивки 🧵","Заботливая, добрая и нежная ❤️","Мамина улыбка — наше счастье 😊","Лучший повар с большой буквы 👩‍🍳","В цветочном саду, где всё цветёт 🌸","Самые тёплые воспоминания 💕","Мама — сердце нашей семьи 💖","С юбилеем, любимая! 🎂"]'>
+        <div class="carousel-slide"><img src="photo/photo_2026-03-21_20-08-34.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/DSCF3857.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/IMG_2660.JPG" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/photo_2026-03-21_20-08-31.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/photo_2026-03-21_20-08-22.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/photo_2026-03-22_15-16-13.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/IMG_0396.JPG" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/DSC_2271.JPG" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/DSCF9650.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/photo_2026-02-04_17-43-26.jpg" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/DSC_0039.JPG" alt="Мама"></div>
+        <div class="carousel-slide"><img src="photo/2020-03-23 15-57-56.JPG" alt="Мама"></div>
+        <div class="carousel-overlay"><div class="carousel-caption"></div></div>
+        <button class="carousel-nav prev">‹</button>
+        <button class="carousel-nav next">›</button>
+        <span class="carousel-counter">1 / 12</span>
+        <span class="carousel-fx-badge"></span>
+        <div class="carousel-progress"></div>
+      </div>
+      <div class="carousel-dots" style="margin-top:20px">
+        <button class="carousel-dot active"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+        <button class="carousel-dot"></button>
+      </div>
+
+      <!-- MOSAIC -->
+      <div class="mosaic-header">
+        <h3 class="section-heading reveal" style="font-size:2rem;margin-top:16px">Все наши<br>фотографии</h3>
+        <div class="divider reveal" style="margin:12px auto"></div>
+      </div>
+
+      <div class="photo-mosaic">
+        <!-- Visible (16) -->
+        <div class="mosaic-item mosaic-reveal">
+          <img src="photo/512508b25f611f1a.gif" alt="" loading="lazy">
+          <div class="mosaic-caption">Мамуля — ты наше солнышко ☀️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s" >
+          <img src="photo/100_1261.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Эти мгновения бесценны 💎</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.1s">
+          <img src="photo/100_9578.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Красота и нежность в каждом кадре 🌸</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.15s">
+          <img src="photo/i.webp" alt="" loading="lazy">
+          <div class="mosaic-caption">Твоя улыбка освещает весь мир 😊</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.2s">
+          <img src="photo/DSCF7357.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Королева цветов в своём саду 🌷</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.25s">
+          <img src="photo/DSCF9645.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Вместе мы счастливы 💞</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.3s">
+          <img src="photo/bb2c59925f711f1bcb412a127aa47a7-_online-video-cutter.com_.gif" alt="" loading="lazy">
+          <div class="mosaic-caption">С любовью от всей семьи ❤️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.35s">
+          <img src="photo/DSC_0039.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Мамины руки творят чудеса — и в кухне, и в вышивке 🧵</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.1s">
+          <img src="photo/DSC_1475.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Доброта в каждом жесте 🕊️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.1s">
+          <img src="photo/SAM_1414.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Любовь всегда рядом 🕊️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.15s">
+          <img src="photo/DSC_2289.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Лучшие воспоминания — рядом с тобой 💕</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.2s">
+          <img src="photo/DSC_2839.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Повар от Бога — вкуснее не бывает! 🍕</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.25s">
+          <img src="photo/DSC_2867.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Каждый день рядом с тобой — подарок 🎁</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.3s">
+          <img src="photo/DSC_5509.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Цветы обожают тебя так же, как мы 🌺</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.35s">
+          <img src="photo/DSC_8260.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Тепло маминых объятий — лучшее лекарство 🤗</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.1s">
+          <img src="photo/DSC_8925.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Твоя забота не знает границ 💗</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.15s">
+          <img src="photo/IMG_0411.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Самая красивая мамочка на свете 👑</div>
+        </div>
+        <!-- Hidden (27) -->
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_0447.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Пироги мамы — наша семейная легенда 🥧</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_1439.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">В каждом вышитом стежке — частичка души 🧵</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_1442.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Сердце семьи — всегда рядом ❤️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_1445.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Мамин сад — произведение искусства 🌻</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_1971.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Счастье — это быть рядом с тобой 🌈</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2255.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Лучшая пицца в мире — мамина! 🍕</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2450.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Цветы растут от твоей любви 🌹</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2482.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Золотые руки, золотое сердце 💛</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2655.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Мамино тепло согревает в любую погоду 🔥</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2660.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Каждая вышитая картина — шедевр 🎨</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2867.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Ты — наш ангел-хранитель 👼</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2928.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Мамины обнимашки — лучше всего на свете 🤗</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/IMG_2954.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">С каждым годом ты становишься ещё прекраснее 🌟</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/2020-03-23 15-57-56.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Весна в сердце — круглый год 🌼</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/2020-03-23 20-03-25.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Вечера дома — самые уютные 🏡</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/2020-09-19 16-38-22.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Деревня, цветы, покой — мамин рай 🌾</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/photo_2026-03-21_20-08-18.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Ты — наше вдохновение каждый день 💫</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/photo_2026-03-21_20-08-31.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Нежность, которая не знает границ 🕊️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/photo_2026-03-21_20-08-34.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Мамочка в самом расцвете! 🌺</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/photo_2026-03-21_20-08-35.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Любовь, которая не измеряется словами 💝</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/photo_2026-03-21_20-08-38.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Спасибо за каждый момент вместе 🙏</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/SAM_1430.jpg" alt="" loading="lazy">
+          <div class="mosaic-caption">Самое доброе сердце на планете ❤️</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/SAM_1770.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Мама — значит любовь 💖</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/SAM_1778.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Целые плантации цветов — твоё царство! 🌻</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/SAM_5503.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Вышивка как искусство — в твоих руках 🎨</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/SAM_5917.JPG" alt="" loading="lazy">
+          <div class="mosaic-caption">Красота и грация — это про тебя 🦋</div>
+        </div>
+        <div class="mosaic-item mosaic-reveal" style="transition-delay:0.05s">
+          <img src="photo/2023-05-20 20-54-26.HEIC" alt="" loading="lazy">
+          <div class="mosaic-caption">Душа к душе 🦋</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MOMENTS ==================== -->
+  <section class="moments-section">
+    <div class="container">
+      <span class="section-label reveal">Воспоминания</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">Моменты,<br>которые греют</h2>
+      <div class="divider reveal" style="transition-delay:0.2s"></div>
+      <div class="timeline">
+        <div class="timeline-item reveal-left" style="transition-delay:0.1s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">Кухня</div>
+          <div class="timeline-text">Аромат маминых пирогов — это запах детства и настоящего счастья. Пицца, которой нет равных!</div>
+        </div>
+        <div class="timeline-item reveal-right" style="transition-delay:0.2s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">Цветы</div>
+          <div class="timeline-text">В деревне мама выращивает целые плантации цветов — это настоящее волшебство разноцветных красок</div>
+        </div>
+        <div class="timeline-item reveal-left" style="transition-delay:0.3s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">Вышивка</div>
+          <div class="timeline-text">Каждая вышитая картина — это произведение искусства. Мамины золотые руки творят настоящие чудеса</div>
+        </div>
+        <div class="timeline-item reveal-right" style="transition-delay:0.4s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">Сердце</div>
+          <div class="timeline-text">Самая заботливая и добрая мама на свете. Ты наш свет и опора — мы тебя безмерно любим!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COUNTER ==================== -->
+  <section class="counter-section">
+    <div class="container" style="text-align:center">
+      <span class="section-label reveal">В цифрах</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">55 лет<br>любви</h2>
+      <div class="divider reveal" style="margin:12px auto;transition-delay:0.2s"></div>
+      <div class="counter-grid">
+        <div class="counter-card reveal-scale" style="transition-delay:0.1s">
+          <div class="counter-value" data-target="20089" data-suffix="">0</div>
+          <div class="counter-label">Дней счастья</div>
+        </div>
+        <div class="counter-card reveal-scale" style="transition-delay:0.2s">
+          <div class="counter-value" data-target="482136" data-suffix="">0</div>
+          <div class="counter-label">Часов заботы</div>
+        </div>
+        <div class="counter-card reveal-scale" style="transition-delay:0.3s">
+          <div class="counter-value" data-target="660" data-suffix="">0</div>
+          <div class="counter-label">Месяцев тепла</div>
+        </div>
+        <div class="counter-card reveal-scale" style="transition-delay:0.4s">
+          <div class="counter-value" data-target="99999" data-suffix="+">0</div>
+          <div class="counter-label">Объятий</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LETTER ==================== -->
+  <section class="letter-section">
+    <div class="container">
+      <span class="section-label reveal">Письмо</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">От всего<br>сердца</h2>
+      <div class="divider reveal" style="transition-delay:0.2s"></div>
+      <div class="letter-card reveal-flip" style="transition-delay:0.3s">
+        <div class="letter-text">
+          <p>Дорогая мамочка!</p>
+          <p>С юбилеем! 55 — это не просто цифра, это 55 лет невероятной любви, нежности и заботы, которыми ты окутываешь нас каждый день.</p>
+          <p>Ты — лучший повар на свете. Твои пироги и пицца — это не просто еда, это любовь, завёрнутая в тесто. Каждый кусочек согревает душу!</p>
+          <p>Ты — художница. Твои вышитые картины украшают наш дом и наши сердца. Каждый стежок — это терпение, мастерство и частичка тебя.</p>
+          <p>Ты — волшебница. Твои цветочные плантации в деревне — это маленький рай на земле, созданный твоими руками.</p>
+          <p>Ты — самая заботливая и добрая мама, которая только может быть. Спасибо за всё, что ты для нас делаешь!</p>
+          <p>Мы любим тебя бесконечно! ❤️</p>
+        </div>
+        <div class="letter-signature">С любовью, твоя семья 💐</div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- ==================== FAMILY PHOTO ==================== -->
+  <section class="family-section">
+    <div class="container" style="text-align:center">
+      <span class="section-label reveal">Наша семья</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">Твои родители тобой гордятся,<br>Мамочка!</h2>
+      <div class="divider reveal" style="margin:12px auto;transition-delay:0.2s"></div>
+      <div class="family-frame reveal-zoom" style="transition-delay:0.3s">
+        <img src="photo/2026-03-22T12-28-12.gif" alt="Наша семья">
+      </div>
+      <div class="family-label reveal" style="transition-delay:0.5s">Они смогли вырастить такую прекрасную дочь, которая стала для них источником радости и гордости. Пусть каждый день будет наполнен радостью, здоровьем, цветами и вкусными пирогами!</div>
+      <div class="family-hearts reveal" style="transition-delay:0.7s">❤️ 💖 ❤️</div>
+    </div>
+  </section>
+
+    <!-- ==================== Old on new ==================== -->
+  <section class="final-section">
+    <div class="container" style="text-align:center">
+      <div class="final-heart reveal-zoom">❤️</div>
+      <h2 class="final-title reveal" style="transition-delay:0.15s">Оставайся всегда молодой, красивой и счастливой,<br>Мамочка!</h2>
+      <div class="family-photos reveal-zoom" style="transition-delay:0.3s">
+        <img src="photo/Снимок экрана 2026-03-22 161552.png" class="photo-young" alt="В молодости">
+        <img src="photo/Снимок экрана 2026-03-22 162023.png" class="photo-now" alt="Сейчас">
+      </div>
+      <p class="final-sub reveal" style="transition-delay:0.3s">
+      Ты — наше вдохновение, наша радость и наша гордость. Пусть каждый день будет наполнен радостью, здоровьем, цветами и вкусными пирогами!
+      </p>
+      <div class="final-icons reveal" style="transition-delay:0.45s">🌸 💐 🎂 🌷 🧵</div>
+      <div class="made-with reveal" style="transition-delay:0.6s">Сделано с ❤️</div>
+    </div>
+  </section>
+
+  <!-- ==================== FAMILY PHOTO ==================== -->
+  <section class="family-section">
+    <div class="container" style="text-align:center">
+      <span class="section-label reveal">Наша семья</span>
+      <h2 class="section-heading reveal" style="transition-delay:0.1s">Вместе —<br>навсегда</h2>
+      <div class="divider reveal" style="margin:12px auto;transition-delay:0.2s"></div>
+      <div class="family-frame reveal-zoom" style="transition-delay:0.3s">
+        <img src="photo/SAM_5540.JPG" alt="Наша семья">
+      </div>
+      <div class="family-label reveal" style="transition-delay:0.5s">Наша дружная семья 👨‍👩‍👧‍👦</div>
+      <div class="family-names reveal" style="transition-delay:0.6s">Ты, папа, я и сестра - вместе мы всегда</div>
+      <div class="family-hearts reveal" style="transition-delay:0.7s">❤️ 💖 ❤️</div>
+    </div>
+  </section>
+
+
+
+  <!-- ==================== FINAL ==================== -->
+  <section class="final-section">
+    <div class="container" style="text-align:center">
+      <div class="final-heart reveal-zoom">❤️</div>
+      <h2 class="final-title reveal" style="transition-delay:0.15s">С Юбилеем,<br>Мамочка!</h2>
+      <p class="final-sub reveal" style="transition-delay:0.3s">
+        Пусть каждый день будет наполнен радостью, здоровьем, цветами и вкусными пирогами!
+      </p>
+      <div class="final-icons reveal" style="transition-delay:0.45s">🌸 💐 🎂 🌷 🧵</div>
+      <div class="made-with reveal" style="transition-delay:0.6s">Сделано с ❤️</div>
+    </div>
+  </section>
+
+  <!-- CONFETTI BUTTON -->
+  <button class="confetti-btn">🎉</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
